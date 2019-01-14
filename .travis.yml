@@ -21,7 +21,7 @@ env:
   - secure: b+sVNkd2CHml63ohZ83LEOGO19Mft+ED5Co+7YCWTnqJEMRj058Ra8S8wfe0ztP3IU/jcVzzuks2o03z3q1pyz0dMEnfzwagxsY57+B7VOzdTK33hC3e1skVV+eUgXKvqqrd9C2CW3Uwihf3WEL33TldrHtVju+hJr2gLeZUS5vxMVGh1+0nddeBTKnNNMSnDGyPlEAEHDWPxgwczoGQTpUkvGSXosRNTqnczyyBN+3mWisaiXoEN20doZX5NMyiP4rJc6cqe/N6By/DJ4d+34zjlMZ2VmtUMruKDPxaX+8uMoHNKy5sjjRXjn4lRPUydi7UCoJ13hV4c47P0JX9puQiZs73v6v5Bs/O0vMQSIESfAJElKyxP02WE6PCDYdjJXspGWkzK5wW9tsqJpQpX9WIpHshvlAlovrql/Dh26zKT8GzavrS4/2+aMObPmByZ041/eCqqb4ZQgrYzEN/9E2fY0nnN235nmBXHY+81qoEG5hswXSpS2VlJJaACa0DHSeh8cmV83i/vIuT2X+EPqBpr/zXTxoNdxRRLYYqvFsRFy3Zl06Rq0I+WnL+Iu3GHP1pJj2PFTyZgPVhbZNc2g3kf8mHifaaiSrZmbNmV0fVLIlXPZP750RU8OBbk+t7Hm3ZtKhNT6IcNgLULUDwFssN6ihd0Dwt9OMBakQw/Zk=
 before_install:
 - openssl aes-256-cbc -K $encrypted_26ba1f6e7e80_key -iv $encrypted_26ba1f6e7e80_iv
-  -in lof-ws-test-5c33f02ea8c8.json.enc -out ~\/lof-ws-test-5c33f02ea8c8.json -d
+  -in lof-ws-test-5c33f02ea8c8.json.enc -out ${TRAVIS_HOME}/lof-ws-test-5c33f02ea8c8.json -d
 - gem install travis -v 1.8.9 --no-document
 - export BUILD_NAME=sub-onlinedogshow-daemon-$TRAVIS_BRANCH-$(date -u "+%Y%m%d%H%M%S")-$TRAVIS_BUILD_NUMBER
 - export GOOGLE_APPLICATION_CREDENTIALS=${TRAVIS_HOME}/lof-ws-test-5c33f02ea8c8.json
