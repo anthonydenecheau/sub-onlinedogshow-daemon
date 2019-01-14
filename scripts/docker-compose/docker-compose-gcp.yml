@@ -1,7 +1,7 @@
 version: '2'
 services:
   subonlinedogshowdaemon:
-    image: anthonydenecheau/sub-onlinedogshow-daemon:pub-onlinedogshow-daemon-master-20190110143529-16
+    image: anthonydenecheau/sub-onlinedogshow-daemon:${TAG_SUB_ODS_SERVICE}
     container_name: sub-onlinedogshowdaemon
     restart: always    
     ports:
