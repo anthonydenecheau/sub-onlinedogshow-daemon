@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: odsSubscription
+        output:
+          destination: odsTopic
+
+example:
+  property: "I AM IN THE DEFAULT"
